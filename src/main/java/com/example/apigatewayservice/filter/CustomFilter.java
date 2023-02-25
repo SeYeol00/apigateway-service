@@ -28,7 +28,7 @@ public class CustomFilter extends AbstractGatewayFilterFactory<CustomFilter.Conf
             ServerHttpRequest request = exchange.getRequest();
             ServerHttpResponse response = exchange.getResponse();
 
-            log.info("커스텀 pre 필터: request uri = {}", request.getId());
+            log.info("커스텀 pre 필터: request id = {}", request.getId());
 
             // 커스텀 post 필터로 에러 리스폰스 핸들러를 에러 코드에 따라 부를 수 있다.
             // 아래 리턴 객체로 등록이 가능하다.
