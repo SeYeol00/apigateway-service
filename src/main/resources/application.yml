@@ -18,11 +18,10 @@ spring:
         - id: first-service
           uri: http://localhost:8081/
           predicates:
-             # ? ??? ???? ? ??? ???.
-             # ?? ??? ??? ? ??? ???? ??? ??? uri ?? ?? ??.
+             # 아래 패스에 적힌 url을 위 uri로 보낸다.
             - Path=/first-service/**
-          # yaml ???? ??? ???? ? ??.
-          # =? ? ? ??? ??
+          # yaml에서 필터를 설정할 수 있다.
+          # 혹은 커스텀 필터를 자바 코드로 구현하여 넣을 수 있다.
           filters:
 #            - AddRequestHeader=first-request, first-requests-header2
 #            - AddResponseHeader=first-response, first-responses-header2
@@ -30,7 +29,7 @@ spring:
         - id: second-service
           uri: http://localhost:8082/
           predicates:
-             # ? ??? ???? ? ??? ???.
+             # 아래 패스에 적힌 url을 위 uri로 보낸다.
             - Path=/second-service/**
           filters:
 #            - AddRequestHeader=second-request, second-requests-header2
