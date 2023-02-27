@@ -1,17 +1,18 @@
 server:
   port: 8080
 
+# 유레카 서버에 등록하는 방법
 eureka:
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: true
+    fetch-registry: true
     service-url:
       defaultZone: http://localhost:8761/eureka
 
 spring:
   application:
     name: agigateway-service
-    # ??? ???? ??? ??? ???? ??? ? ?????? ??? ????.
+    # 유레카 서버에서 보이는 어플리케이션 이름
   cloud:
     gateway:
       # 글로벌 필터 선언
